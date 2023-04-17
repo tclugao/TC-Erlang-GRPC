@@ -9,6 +9,8 @@ defmodule IntegrationsGrpc.Application do
     children = [
       # Starts a worker by calling: IntegrationsGrpc.Worker.start_link(arg)
       # {IntegrationsGrpc.Worker, arg}
+       {GRPC.Server.Supervisor, {Helloworld.Endpoint, 50_051}}
+      # {GRPC.Server.Supervisor, endpoint: Helloworld.Endpoint, port: 50051, start_server: true}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
