@@ -14,7 +14,7 @@ defmodule IntegrationsGrpc.MixProject do
   # Run "mix help compile.app" to learn about applications.
   def application do
     [
-      # extra_applications: [:logger],
+      extra_applications: [:logger],
       # mod: {IntegrationsGrpc.Application, []}
     ]
   end
@@ -26,7 +26,8 @@ defmodule IntegrationsGrpc.MixProject do
       # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
       {:grpc, "~> 0.5.0"},
       # {:grpc, git: "git@github.com:elixir-grpc/grpc.git", branch: "master"},
-      {:protobuf, git: "git@github.com:tigertext/protobuf.git", branch: "lugao_v1"}
+      {:protobuf, "~> 0.10.0"}
+      # {:protobuf, git: "git@github.com:tigertext/protobuf.git", branch: "lugao_v1"}
     ]
   end
 end
